@@ -9,10 +9,14 @@ def GetMainMenu() -> IElement:
     getAverage = Button("Average", lambda: print(GetAverage(DB.SystemAdminsPayments)))
 
     getFilterValue = Button("Filter", lambda: PrintFilterValue(DB.SystemAdminsPayments, GetFilterValueSetingsMenu()))
+    getCustomFilter = Button("CustomFilter", lambda: PrintFilterValue(DB.SystemAdminsPayments, GetCustomUserFilter()))
 
     addNewAdmin = Button("Add", lambda: AddNewAdmin(DB.SystemAdminsPayments, input("Enter first and last name\n-> "), GetDigitUserInput()))
     removeAdmin = Button("Remove", lambda: RemoveAdmin(DB.SystemAdminsPayments, input("Enter first and last name\n-> ")))
     printAll = Button("PrintAll", lambda: PrintAll(DB.SystemAdminsPayments))
+
+    loadDateBase = Button("LoadDateBase", lambda: LoadDateBase(DB.SystemAdminsPayments, "DataBase.json"))
+    saveDateBase = Button("SaveDateBase", lambda: SaveDateBase(DB.SystemAdminsPayments, "DataBase.json"))
 
 
     dataBaseMenuOptions = ItemContainer("Options")
@@ -20,23 +24,28 @@ def GetMainMenu() -> IElement:
     dataBaseMenuOptions.AddChildren(getMin)
     dataBaseMenuOptions.AddChildren(getAverage)
 
-    adminsTools = ItemContainer("Admins Tools")
+    adminsTools = ItemContainer("Admins_Tools")
     adminsTools.AddChildren(addNewAdmin)
     adminsTools.AddChildren(removeAdmin)
     adminsTools.AddChildren(printAll)
 
-    dataBaseMenuOtherOptions = ItemContainer("Other options")
+    dataBaseMenuOtherOptions = ItemContainer("Other_options")
     dataBaseMenuOtherOptions.AddChildren(getFilterValue)
+    dataBaseMenuOtherOptions.AddChildren(getCustomFilter)
 
     appLication = ItemContainer("Main")
 
     appLication.AddChildren(dataBaseMenuOptions)
     appLication.AddChildren(adminsTools)
     appLication.AddChildren(dataBaseMenuOtherOptions)
+    appLication.AddChildren(loadDateBase)
+    appLication.AddChildren(saveDateBase)
 
     return  appLication
 
-
+def GetCustomUserFilter():
+    com = f"lambda a: {input()}"
+    return eval(com)
 def GetFilterValueSetingsMenu():
     print("Chose operation")
     print("<\n<=\n==\n>=\n>\n!=")
@@ -68,7 +77,6 @@ def GetDigitUserInput():
 
 
 def PrintFilterValue(base: dict, filter):
-    m = FilterValue(base, filter)
-    for i in m:
-        print(i)
+    for i in FilterValue(base, filter):
+        print(i, base[i])
 

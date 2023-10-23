@@ -11,7 +11,7 @@ class Application:
     def RunApplication(self):
         loop = True
         while(loop):
-            print("*" * 20)
+            print("░" * 20)
             self.__historyMenu[-1].DisplayChildrens()
             userInput = input()
 

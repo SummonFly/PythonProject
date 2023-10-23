@@ -55,7 +55,7 @@ class ItemContainer(IElement):
     def DisplayChildrens(self):
         print(self.__name)
         for it in self.childrens:
-            print(f'\t', end=' ')
+            print(f'→', end=' ')
             print(it.Name())
 
 

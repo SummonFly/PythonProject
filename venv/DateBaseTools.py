@@ -1,3 +1,7 @@
+import json
+import pickle
+
+
 def FilterValue(base: dict, filter):
     result = dict()
     for key in base.keys():
@@ -46,3 +50,15 @@ def RemoveAdmin(base: dict, admin: str):
 def PrintAll(base: dict):
     for key in base:
         print(key, base[key])
+
+
+def SaveDateBase(base: dict, path: str):
+    with open(path, "w") as file:
+        json.dump(base, file)
+        file.close()
+
+
+def LoadDateBase(base: dict, path: str) -> dict:
+    with open(path, "r") as file:
+        base = json.load(file)
+        file.close()
