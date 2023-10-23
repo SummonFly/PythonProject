@@ -30,19 +30,20 @@ def GetMainMenu() -> IElement:
 def GetFilterValueSetingsMenu():
     print("Chose operation")
     print("<\n<=\n==\n>=\n>\n!=")
-    userInput = input()
-    if(userInput == "<"):
-        return lambda a: a < GetDigitUserInput()
-    elif(userInput == "<="):
-        return lambda a: a <= GetDigitUserInput()
-    elif(userInput == "=="):
-        return lambda a: a == GetDigitUserInput()
-    elif(userInput == ">="):
-        return lambda a: a >= GetDigitUserInput()
-    elif(userInput == ">"):
-        return lambda a: a > GetDigitUserInput()
-    elif(userInput == "!="):
-        return lambda a: a != GetDigitUserInput()
+    operation = input()
+    number = GetDigitUserInput()
+    if(operation == "<"):
+        return lambda a: a < number
+    elif(operation == "<="):
+        return lambda a: a <= number
+    elif(operation == "=="):
+        return lambda a: a == number
+    elif(operation == ">="):
+        return lambda a: a >= number
+    elif(operation == ">"):
+        return lambda a: a > number
+    elif(operation == "!="):
+        return lambda a: a != number
 
 def GetDigitUserInput():
     print("Write value")
@@ -57,5 +58,6 @@ def GetDigitUserInput():
 
 
 def PrintFilterValue(base: dict, filter):
-    for i in FilterValue(base, filter):
+    m = FilterValue(base, filter)
+    for i in m:
         print(i)
