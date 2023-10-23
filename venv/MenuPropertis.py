@@ -10,11 +10,20 @@ def GetMainMenu() -> IElement:
 
     getFilterValue = Button("Filter", lambda: PrintFilterValue(DB.SystemAdminsPayments, GetFilterValueSetingsMenu()))
 
+    addNewAdmin = Button("Add", lambda: AddNewAdmin(DB.SystemAdminsPayments, input("Enter first and last name\n-> "), GetDigitUserInput()))
+    removeAdmin = Button("Remove", lambda: RemoveAdmin(DB.SystemAdminsPayments, input("Enter first and last name\n-> ")))
+    printAll = Button("PrintAll", lambda: PrintAll(DB.SystemAdminsPayments))
+
 
     dataBaseMenuOptions = ItemContainer("Options")
     dataBaseMenuOptions.AddChildren(getMax)
     dataBaseMenuOptions.AddChildren(getMin)
     dataBaseMenuOptions.AddChildren(getAverage)
+
+    adminsTools = ItemContainer("Admins Tools")
+    adminsTools.AddChildren(addNewAdmin)
+    adminsTools.AddChildren(removeAdmin)
+    adminsTools.AddChildren(printAll)
 
     dataBaseMenuOtherOptions = ItemContainer("Other options")
     dataBaseMenuOtherOptions.AddChildren(getFilterValue)
@@ -22,6 +31,7 @@ def GetMainMenu() -> IElement:
     appLication = ItemContainer("Main")
 
     appLication.AddChildren(dataBaseMenuOptions)
+    appLication.AddChildren(adminsTools)
     appLication.AddChildren(dataBaseMenuOtherOptions)
 
     return  appLication
@@ -51,7 +61,7 @@ def GetDigitUserInput():
         try:
             userInput = int(input('->'))
         except:
-            print("Тут")
+            print("Value is't integer")
             continue
         break
     return userInput
@@ -61,3 +71,4 @@ def PrintFilterValue(base: dict, filter):
     m = FilterValue(base, filter)
     for i in m:
         print(i)
+

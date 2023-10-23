@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe1ea137-efe0-4a6f-9ca7-7b1a69e9f81a" name="Changes" comment="FirstCommit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fe1ea137-efe0-4a6f-9ca7-7b1a69e9f81a" name="Changes" comment="FixBagMultiInput">
       <change beforePath="$PROJECT_DIR$/venv/MenuPropertis.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/MenuPropertis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697765182772</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FixBagMultiInput">
+      <option name="closed" value="true" />
+      <created>1698070012210</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698070012210</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +234,7 @@
     <MESSAGE value="Revert &quot;First commit&quot;&#10;&#10;This reverts commit e88aa91436e355a72da6e58d4e811ec3f2ddc5de." />
     <MESSAGE value="First commit" />
     <MESSAGE value="FirstCommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="FirstCommit" />
+    <MESSAGE value="FixBagMultiInput" />
+    <option name="LAST_COMMIT_MESSAGE" value="FixBagMultiInput" />
   </component>
 </project>

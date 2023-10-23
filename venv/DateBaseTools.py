@@ -43,4 +43,6 @@ def AddNewAdmin(base: dict, admin: str, payments: int):
 def RemoveAdmin(base: dict, admin: str):
     base.pop(admin)
 
-
+def PrintAll(base: dict):
+    for key in base:
+        print(key, base[key])
