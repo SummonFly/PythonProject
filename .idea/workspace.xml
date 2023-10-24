@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe1ea137-efe0-4a6f-9ca7-7b1a69e9f81a" name="Changes" comment="AddNewOptionAdminsTools">
+    <list default="true" id="fe1ea137-efe0-4a6f-9ca7-7b1a69e9f81a" name="Changes" comment="AddExperimentalCustomFilterAndSomeOtherThinks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/ApplicationCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/ApplicationCore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/DateBaseTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/DateBaseTools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/MenuPropertis.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/MenuPropertis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,21 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/SummonFly/PycharmProjects/pythonApplication",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SummonFly/PycharmProjects/pythonApplication&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SummonFly\PycharmProjects\pythonApplication\venv" />
@@ -207,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698071820672</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="AddExperimentalCustomFilterAndSomeOtherThinks">
+      <option name="closed" value="true" />
+      <created>1698076552377</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698076552377</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +256,7 @@
     <MESSAGE value="FirstCommit" />
     <MESSAGE value="FixBagMultiInput" />
     <MESSAGE value="AddNewOptionAdminsTools" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddNewOptionAdminsTools" />
+    <MESSAGE value="AddExperimentalCustomFilterAndSomeOtherThinks" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddExperimentalCustomFilterAndSomeOtherThinks" />
   </component>
 </project>

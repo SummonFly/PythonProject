@@ -2,7 +2,7 @@ import json
 import pickle
 
 
-def FilterValue(base: dict, filter):
+def FilterValue(base: dict, filter) -> dict:
     result = dict()
     for key in base.keys():
         if(filter(base[key])):
@@ -10,14 +10,14 @@ def FilterValue(base: dict, filter):
     return result
 
 
-def FilterKey(base: dict, filter):
+def FilterKey(base: dict, filter) -> dict:
     result = dict()
     for key in base.keys():
         if(filter(key)):
             result[key] = base[key]
     return result
 
-def GetMaxValue(base: dict):
+def GetMaxValue(base: dict) -> int:
     maxValue = (0, 0)
     for key in base.keys():
         if(base[key] > maxValue[1]):
@@ -25,7 +25,7 @@ def GetMaxValue(base: dict):
     return maxValue
 
 
-def GetMinValue(base: dict):
+def GetMinValue(base: dict) -> int:
     minValue = (0, GetMaxValue(base)[1])
     for key in base.keys():
         if(base[key] < minValue[1]):
@@ -33,7 +33,7 @@ def GetMinValue(base: dict):
     return minValue
 
 
-def GetAverage(base: dict):
+def GetAverage(base: dict) -> float:
     average = 0
     for key in base.keys():
         average += base[key]
@@ -58,7 +58,7 @@ def SaveDateBase(base: dict, path: str):
         file.close()
 
 
-def LoadDateBase(base: dict, path: str) -> dict:
+def LoadDateBase(outBase: dict, path: str):
     with open(path, "r") as file:
-        base = json.load(file)
+        outBase = json.load(file)
         file.close()

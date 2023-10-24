@@ -15,14 +15,14 @@ class Application:
             self.__historyMenu[-1].DisplayChildrens()
             userInput = input()
 
-            if(userInput == self.__historyMenu[0].Name()):
+            if(userInput == self.__historyMenu[0].Name()): #Если пользователь вабрал корневой элемент, то завершаем программу
                 loop = False
                 continue
-            elif(userInput == self.__historyMenu[-1].Name()):
+            elif(userInput == self.__historyMenu[-1].Name()): #Если пользователь вабрал элемент который сейчас активен, то поднимаемся вверх по иерархии
                 self.__historyMenu.pop()
                 continue
-            for c in self.__historyMenu[-1].childrens:
-                if(userInput == c.Name()):
+            for c in self.__historyMenu[-1].childrens: #Проходим по дочерним элементам текушего элемента
+                if(userInput == c.Name()): #Проверяем этот-ли пункт выбрал пользователь
                     if(isinstance(c, Button)):
                         c.Action()
                         break

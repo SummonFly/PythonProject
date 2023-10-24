@@ -10,13 +10,12 @@ def GetMainMenu() -> IElement:
 
     getFilterValue = Button("Filter", lambda: PrintFilterValue(DB.SystemAdminsPayments, GetFilterValueSetingsMenu()))
     getCustomFilter = Button("CustomFilter", lambda: PrintFilterValue(DB.SystemAdminsPayments, GetCustomUserFilter()))
+    loadDateBase = Button("LoadDateBase", lambda: LoadDateBase(DB.SystemAdminsPayments, "DataBase.json"))
+    saveDateBase = Button("SaveDateBase", lambda: SaveDateBase(DB.SystemAdminsPayments, "DataBase.json"))
 
     addNewAdmin = Button("Add", lambda: AddNewAdmin(DB.SystemAdminsPayments, input("Enter first and last name\n-> "), GetDigitUserInput()))
     removeAdmin = Button("Remove", lambda: RemoveAdmin(DB.SystemAdminsPayments, input("Enter first and last name\n-> ")))
     printAll = Button("PrintAll", lambda: PrintAll(DB.SystemAdminsPayments))
-
-    loadDateBase = Button("LoadDateBase", lambda: LoadDateBase(DB.SystemAdminsPayments, "DataBase.json"))
-    saveDateBase = Button("SaveDateBase", lambda: SaveDateBase(DB.SystemAdminsPayments, "DataBase.json"))
 
 
     dataBaseMenuOptions = ItemContainer("Options")
@@ -32,20 +31,22 @@ def GetMainMenu() -> IElement:
     dataBaseMenuOtherOptions = ItemContainer("Other_options")
     dataBaseMenuOtherOptions.AddChildren(getFilterValue)
     dataBaseMenuOtherOptions.AddChildren(getCustomFilter)
+    dataBaseMenuOtherOptions.AddChildren(loadDateBase)
+    dataBaseMenuOtherOptions.AddChildren(saveDateBase)
 
     appLication = ItemContainer("Main")
-
     appLication.AddChildren(dataBaseMenuOptions)
     appLication.AddChildren(adminsTools)
     appLication.AddChildren(dataBaseMenuOtherOptions)
-    appLication.AddChildren(loadDateBase)
-    appLication.AddChildren(saveDateBase)
 
     return  appLication
+
 
 def GetCustomUserFilter():
     com = f"lambda a: {input()}"
     return eval(com)
+
+
 def GetFilterValueSetingsMenu():
     print("Chose operation")
     print("<\n<=\n==\n>=\n>\n!=")
@@ -63,6 +64,7 @@ def GetFilterValueSetingsMenu():
         return lambda a: a > number
     elif(operation == "!="):
         return lambda a: a != number
+
 
 def GetDigitUserInput():
     print("Write value")
